@@ -1,0 +1,104 @@
+.infoVista9 {
+    display: grid;
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+    grid-template-columns: 0.1fr 1.8fr 0.1fr;
+    grid-template-rows: 5px auto 5px;
+    gap: 0px 0px;
+    grid-template-areas:
+        ". . ."
+        ". vista9 ."
+        ". . .";
+}
+
+.vista9 {
+    display: grid;
+    position: relative;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 99% 1%;
+    gap: 0px 0px;
+    grid-template-areas:
+        "resumenIntc resumenIntc"
+        "botonV9 botonV9";
+    grid-area: vista9;
+}
+
+.resumenIntc{
+    grid-area: resumenIntc;
+    width: 90%;
+    margin: auto;
+}
+
+.resumenIntc img{
+    max-width: 100%;
+}
+
+.botonV9 {
+    grid-area: botonV9;
+    position: absolute;
+    left: 50%;
+    top: 20%;
+    transform: translate(-50%,-50%);
+    width: 100%;
+    margin: auto;
+    text-align: center;
+}
+
+.botonV9 input[type=submit]{
+    background-image: url('../../img/encuesta/BOTON_S.svg');
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-color: transparent;
+    padding: 1.4% 3px;
+    border: none;
+    width: 22%;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+}
+
+.botonV9 input[type=submit]:hover{
+    transform: scale(1.05);
+}
+
+@media screen and (max-width: 1024px) {
+    .infoVista9 {
+        grid-template-columns: 0.05fr 2.9fr 0.05fr;
+    }
+
+    .resumenIntc {
+        width: 95%;
+    }
+
+    .botonV9 input[type=submit]{
+        font-size: var(--btnTV);
+        width: 24%;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .vista9 {
+        grid-template-rows: auto 6vw;
+    }
+
+    .resumenIntc {
+        width: 100%;
+    }
+
+    .botonV9 input[type=submit]{
+        font-size: var(--btnTab);
+        width: 26%;
+        height: 5.5vw;
+    }
+}
+
+@media screen and (max-width: 540px) {
+    .botonV9 input[type=submit]{
+        font-size: var(--btnMob);
+        width: 28%;
+        height: 5vw;
+    }
+}

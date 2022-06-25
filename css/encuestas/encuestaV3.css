@@ -1,0 +1,480 @@
+.infoVista3 {
+  display: grid;
+  grid-template-columns: 0.1fr 1.8fr 0.1fr;
+  grid-template-rows: 30px auto 40px;
+  gap: 0px 0px;
+  grid-template-areas:
+    ". . ."
+    ". vista3 ."
+    ". . .";
+  width: 100%;
+  margin: auto;
+}
+
+.vista3 {
+  display: grid;
+  position: relative;
+  width: 100%;
+  margin: auto;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 18vw 7vw 7vw 2vw;
+  gap: 15px 15px;
+  grid-template-areas:
+    "estudios1 estudios2"
+    "estudios3 estudios3"
+    "ocupaciones ocupaciones"
+    "botonV3 botonV3";
+  grid-area: vista3;
+  font-size: var(--textTV);
+}
+
+.vista3 input[type=radio] {
+  opacity: 0;
+  position: fixed;
+  width: 1px;
+}
+
+.vista3 input[type=text] {
+  font-family: montserrat;
+  background-color: transparent;
+  border: 1px solid var(--titulos);
+  border-radius: 20px;
+  text-align: center;
+  width: 80%;
+  height: 2vw;
+}
+
+.estudios1 {
+  display: grid;
+  text-align: center;
+  background-color: var(--background);
+  box-shadow: var(--shadow);
+  border-radius: 20px;
+  grid-template-columns: 5% 30% 30% 30% 5%;
+  grid-template-rows: 25% 23.3% 23.3% 23.3% 5%;
+  gap: 0px 0px;
+  grid-template-areas:
+    ". pregEst1 pregEst1 pregEst1 ."
+    ". opc11 opc12 opc13 ."
+    ". opc14 opc15 opc16 ."
+    ". opc1718 opc1718 opc1718 ."
+    ". . . . .";
+  grid-area: estudios1;
+}
+
+.pregEst1 {
+  grid-area: pregEst1;
+  width: 100%;
+  margin: auto;
+}
+
+.opc11 {
+  grid-area: opc11;
+  width: 90%;
+  margin: auto;
+}
+
+.opc12 {
+  grid-area: opc12;
+  width: 90%;
+  margin: auto;
+}
+
+.opc13 {
+  grid-area: opc13;
+  width: 90%;
+  margin: auto;
+}
+
+.opc14 {
+  grid-area: opc14;
+  width: 90%;
+  margin: auto;
+}
+
+.opc15 {
+  grid-area: opc15;
+  width: 90%;
+  margin: auto;
+}
+
+.opc16 {
+  grid-area: opc16;
+  width: 90%;
+  margin: auto;
+  word-wrap: break-word;
+}
+
+.opc1718 {
+  grid-area: opc1718;
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-template-rows: 100%;
+  gap: 0px 0px;
+  grid-template-areas:
+    "opc17 opc18";
+  width: 70%;
+  margin: auto;
+}
+
+.opc17 {
+  grid-area: opc17;
+  width: 90%;
+  margin: auto;
+}
+
+.opc18 {
+  grid-area: opc18;
+  width: 90%;
+  margin: auto;
+}
+
+.estudios2 {
+  display: grid;
+  text-align: center;
+  background-color: var(--background);
+  box-shadow: var(--shadow);
+  border-radius: 20px;
+  grid-template-columns: 5% 30% 30% 30% 5%;
+  grid-template-rows: 25% 23.3% 23.3% 23.3% 5%;
+  gap: 0px 0px;
+  grid-template-areas:
+    ". pregEst2 pregEst2 pregEst2 ."
+    ". opc21 opc22 opc23 ."
+    ". opc24 opc25 opc26 ."
+    ". opc27 opc28 opc29 ."
+    ". . . . .";
+  grid-area: estudios2;
+}
+
+.pregEst2 {
+  grid-area: pregEst2;
+  width: 100%;
+  margin: auto;
+}
+
+.opc21 {
+  grid-area: opc21;
+  width: 90%;
+  margin: auto;
+}
+
+.opc22 {
+  grid-area: opc22;
+  width: 90%;
+  margin: auto;
+}
+
+.opc23 {
+  grid-area: opc23;
+  width: 90%;
+  margin: auto;
+}
+
+.opc24 {
+  grid-area: opc24;
+  width: 90%;
+  margin: auto;
+}
+
+.opc25 {
+  grid-area: opc25;
+  width: 90%;
+  margin: auto;
+}
+
+.opc26 {
+  grid-area: opc26;
+  width: 90%;
+  margin: auto;
+  word-wrap: break-word;
+}
+
+.opc27 {
+  grid-area: opc27;
+  width: 90%;
+  margin: auto;
+}
+
+.opc28 {
+  grid-area: opc28;
+  width: 90%;
+  margin: auto;
+}
+
+.opc29 {
+  grid-area: opc29;
+  width: 90%;
+  margin: auto;
+}
+
+.estudios3 {
+  display: grid;
+  background-color: var(--background);
+  box-shadow: var(--shadow);
+  border-radius: 20px;
+  grid-template-columns: 40% 60%;
+  grid-template-rows: 1fr;
+  gap: 0px 0px;
+  grid-template-areas:
+    "pregEst3 formEst3";
+  grid-area: estudios3;
+}
+
+.pregEst3 {
+  grid-area: pregEst3;
+  width: 90%;
+  margin: auto;
+  text-align: right;
+}
+
+.formEst3 {
+  grid-area: formEst3;
+  width: 100%;
+  margin: auto;
+}
+
+.ocupaciones {
+  display: grid;
+  background-color: var(--background);
+  box-shadow: var(--shadow);
+  border-radius: 20px;
+  grid-template-columns: 30% 15% 15% 15% 15%;
+  grid-template-rows: 1fr;
+  gap: 0px 0px;
+  grid-template-areas:
+    "pregOcu opcOcu1 opcOcu2 opcOcu3 opcOcu4";
+  grid-area: ocupaciones;
+}
+
+.pregOcu {
+  grid-area: pregOcu;
+  width: 90%;
+  margin: auto;
+  text-align: right;
+}
+
+.opcOcu1 {
+  grid-area: opcOcu1;
+  width: 80%;
+  margin: auto 0;
+  text-align: center;
+}
+
+.opcOcu2 {
+  grid-area: opcOcu2;
+  width: 80%;
+  margin: auto 0;
+  text-align: center;
+}
+
+.opcOcu3 {
+  grid-area: opcOcu3;
+  width: 80%;
+  margin: auto 0;
+  text-align: center;
+}
+
+.opcOcu4 {
+  grid-area: opcOcu4;
+  width: 80%;
+  margin: auto 0;
+  text-align: center;
+}
+
+.estudios1 .preguntas,
+.estudios2 .preguntas,
+.estudios3 .preguntas,
+.ocupaciones .preguntas {
+  font-family: montserrat;
+  font-style: oblique;
+  color: var(--titulos);
+}
+
+.vista3 .opciones {
+  display: inline-block;
+  background-color: transparent;
+  width: 90%;
+  height: 100%;
+  font-family: montserratLight;
+  padding: 8px 0;
+  border: 1px solid var(--titulos);
+  border-radius: 25px;
+  cursor: pointer;
+  transition: all .2s ease-in-out;
+}
+
+.estudios1 input[type="radio"]:checked+label,
+.estudios2 input[type="radio"]:checked+label,
+.ocupaciones input[type="radio"]:checked+label {
+  background-color: var(--titulos);
+  color: white;
+  border: 1px solid var(--titulos);
+  transform: scale(1.05);
+}
+
+.opciones:hover {
+  background-color: var(--titulos);
+  color: white;
+  transform: scale(1.05);
+}
+
+.botonV3 {
+  grid-area: botonV3;
+  position: absolute;
+  left: 50%;
+  top: 100%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  margin: auto;
+  text-align: center;
+}
+
+.botonV3 input[type=submit] {
+  background-image: url('../../img/encuesta/BOTON_S.svg');
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-color: transparent;
+  padding: 1.4% 3px;
+  border: none;
+  width: 22%;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+.botonV3 input[type=submit]:hover {
+  transform: scale(1.05);
+}
+
+@media screen and (max-width: 1024px) {
+  .vista3 {
+    grid-template-rows: 26vw 26vw 9vw 10vw 2vw;
+    gap: 15px 15px;
+    grid-template-areas:
+      "estudios1 estudios1"
+      "estudios2 estudios2"
+      "estudios3 estudios3"
+      "ocupaciones ocupaciones"
+      "botonV3 botonV3";
+    font-size: var(--textLap);
+  }
+
+  .vista3 input[type=text] {
+    font-size: 1.5vw;
+  }
+
+  .vista3 .opciones {
+    width: 100%;
+  }
+
+  .ocupaciones {
+    grid-template-columns: 15% 20.5% 20.5% 20.5% 20.5% 3%;
+  }
+
+  .opcOcu1 {
+    width: 90%;
+    margin: auto;
+  }
+  
+  .opcOcu2 {
+    width: 90%;
+    margin: auto;
+  }
+  
+  .opcOcu3 {
+    width: 90%;
+    margin: auto;
+  }
+  
+  .opcOcu4 {
+    width: 90%;
+    margin: auto;
+  }
+}
+
+@media screen and (max-width: 767px) {
+
+  .infoVista3 {
+    grid-template-columns: 2% 96% 2%;
+  }
+
+  .vista3 {
+    grid-template-rows: 36vw 36vw 12vw 15vw 2vw;
+    gap: 15px 15px;
+    font-size: var(--textTab);
+  }
+
+  .estudios1 {
+    grid-template-columns: 2% 32% 32% 32% 2%;
+    grid-template-rows: 32% 22% 22% 22% 2%;
+  }
+
+  .estudios2 {
+    grid-template-columns: 2% 32% 32% 32% 2%;
+    grid-template-rows: 32% 22% 22% 22% 2%;
+  }
+
+  .vista3 .opciones {
+    padding: 8px 0px;
+    border-radius: 15px;
+    width: 100%;
+  }
+
+  .vista3 input[type=text] {
+    width: 80%;
+    height: 3vw;
+    font-size: 1.9vw;
+  }
+
+  .ocupaciones {
+    grid-template-columns: 20% 20% 20% 20% 20%;
+    grid-template-rows: 1fr;
+  }
+
+  .botonV3 input[type=submit] {
+    width: 23%;
+    height: 5vw;
+  }
+}
+
+@media screen and (max-width: 540px) {
+
+  .vista3 {
+    grid-template-rows: 42vw 44vw 16vw 18vw 6vw;
+    font-size: var(--textMob);
+  }
+
+  .vista3 .opciones {
+    width: 98%;
+    height: 80%;
+    padding: 6px 0;
+    border-radius: 15px;
+  }
+
+  .vista3 input[type=text] {
+    width: 80%;
+    height: 5.5vw;
+    font-size: 2.5vw;
+  }
+
+  .botonV3 {
+    top: 100%;
+  }
+
+  .botonV3 input[type=submit] {
+    padding: 1.8% 3px;
+    width: 35%;
+    border: 1px solid white;
+    border-radius: 7px;
+  }
+
+  .botonV3 input[type=submit] {
+    width: 35%;
+    height: 8vw;
+  }
+
+  .ocupaciones {
+    grid-template-columns: 20% 20% 20% 20% 20%;
+    grid-template-rows: 1fr;
+  }
+}

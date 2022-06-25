@@ -1,0 +1,282 @@
+#fondoIntCarrera {
+    background-image: url("../../img/intencionCarrera/FONDO.png");
+    background-attachment: scroll;
+    background-position: left bottom;
+    background-repeat: no-repeat;
+    background-size: 108% 108%;
+    min-height: 100%;
+    position: relative;
+}
+
+.grid-containerCarrera {
+    display: grid;
+    position: relative;
+    grid-template-columns: 30% 35% 35%;
+    grid-template-rows: 40px 50vw 42vw 110px;
+    gap: 0px 0px;
+    height: 100%;
+}
+
+.carrera {
+    display: grid;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background-image: url("../../img/interesVocacional/BASE.png");
+    background-size: 97% 100%;
+    background-position: center top;
+    background-repeat: no-repeat;
+    grid-template-columns: 16.6% 16.6% 16.6% 16.6% 16.6% 16.6%;
+    grid-template-rows: 17% 17% 17% 8% 8% 8% 9% 9%;
+    gap: 0px 0px;
+    grid-template-areas:
+        "medallasCar medallasCar medallasCar medallasCar medallasCar medallasCar"
+        "medallasCar medallasCar medallasCar medallasCar medallasCar medallasCar"
+        "medallasCar medallasCar medallasCar medallasCar medallasCar medallasCar"
+        "porcentajesCar porcentajesCar porcentajesCar porcentajesCar porcentajesCar porcentajesCar"
+        "porcentajesCar porcentajesCar porcentajesCar porcentajesCar porcentajesCar porcentajesCar"
+        "porcentajesCar porcentajesCar porcentajesCar porcentajesCar porcentajesCar porcentajesCar"
+        "botones botones botones botones botones botones"
+        "botones botones botones botones botones botones"
+        "botones botones botones botones botones botones";
+    grid-area: 2 / 2 / 4 / 4;
+}
+
+.porcentajesCar {
+    display: grid;
+    position: relative;
+    width: 90%;
+    height: 100%;
+    margin: 0 auto;
+    grid-template-columns: 16.7% 16.7% 16.6% 16.6% 16.7% 16.7%;
+    grid-template-rows: 50% 35% 15%;
+    gap: 0px 0px;
+    grid-template-areas:
+        "infoAtento infoDinamico infoMetodico infoImaginativo infoAdaptable infoPractico"
+        "mensajePers mensajePers mensajePers mensajePers mensajePers mensajePers"
+        "mensaje mensaje mensaje mensaje mensaje mensaje";
+    grid-area: porcentajesCar;
+}
+
+.mensajePers {
+    grid-area: mensajePers;
+    font-family: montserratLight;
+    color: black;
+    font-size: 1.3vw;
+    text-align: center;
+    margin: auto;
+}
+
+.infoAtento {
+    grid-area: infoAtento;
+    margin: 0;
+    position: relative;
+    text-align: center;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+.infoDinamico {
+    grid-area: infoDinamico;
+    margin: 0;
+    position: relative;
+    text-align: center;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+.infoMetodico {
+    grid-area: infoMetodico;
+    margin: 0;
+    position: relative;
+    text-align: center;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+.infoImaginativo {
+    grid-area: infoImaginativo;
+    margin: 0;
+    position: relative;
+    text-align: center;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+.infoAdaptable {
+    grid-area: infoAdaptable;
+    margin: 0;
+    position: relative;
+    text-align: center;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+.infoPractico {
+    grid-area: infoPractico;
+    margin: 0;
+    position: relative;
+    text-align: center;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+.infoAtento img,
+.infoDinamico img,
+.infoMetodico img,
+.infoImaginativo img,
+.infoAdaptable img,
+.infoPractico img {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 10vw;
+    transition: all 0.2s ease-in-out;
+}
+
+#txtAtentoCar,
+#txtDinamicoCar,
+#txtMetodicoCar,
+#txtImaginativoCar,
+#txtAdaptableCar,
+#txtPracticoCar {
+    font-family: throwBold;
+    color: #ffff;
+    font-size: 3vw;
+    position: absolute;
+    top: 48%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.medallasCar {
+    display: grid;
+    position: relative;
+    grid-template-columns: 16.6% 16.7% 16.7% 15% 12% 23%;
+    grid-template-rows: 25vw 15vw;
+    gap: 0px 0px;
+    grid-template-areas:
+        "intencion intencion intencion medalla1 medalla2 nombre"
+        "intencion intencion intencion personajeCar personajeCar personajeCar";
+    grid-area: medallasCar;
+}
+
+.intencion {
+    grid-area: intencion;
+    text-align: right;
+    height: 100%;
+    margin-top: -2%;
+}
+
+.intencion img {
+    width: 82%;
+}
+
+.personajeCar {
+    grid-area: personajeCar;
+    position: absolute;
+    text-align: center;
+    left: 50%;
+    top: 45%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+}
+
+.personajeCar img {
+    width: 60%;
+}
+
+@media screen and (max-width: 1024px) {
+    .grid-containerCarrera {
+        grid-template-rows: 40px 40vw 40vw 90px;
+    }
+
+    .medallasCar {
+        grid-template-rows: 23vw 15vw 12vw 6vw 12vw;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    #fondoIntCarrera {
+        background-size: 150% 90%;
+    }
+
+    .porcentajesCar {
+        grid-template-columns: 16.7% 16.7% 16.6% 16.6% 16.7% 16.7%;
+        grid-template-rows: 65% 20% 15%;
+    }
+
+    .grid-containerCarrera {
+        grid-template-columns: 0% 50% 50%;
+        grid-template-rows: 40px 75vw 55vw 80px;
+    }
+
+    .mensajePers {
+        font-size: 1.7vw;
+    }
+
+    .medallasCar {
+        grid-template-rows: 35vw 18vw 18vw;
+    }
+
+    .carrera {
+        margin-top: 3%;
+    }
+
+    .intencion img {
+        width: 90%;
+    }
+
+    .infoAtento img,
+    .infoDinamico img,
+    .infoMetodico img,
+    .infoImaginativo img,
+    .infoAdaptable img,
+    .infoPractico img {
+        width: 15vw;
+    }
+}
+
+@media screen and (max-width: 540px) {
+    #fondoIntCarrera {
+        background-size: 250% 90%;
+        height: 160vw;
+    }
+
+    .grid-containerCarrera {
+        grid-template-rows: 10% 40% 40% 10%;
+    }
+
+    .mensajePers {
+        font-size: 2.2vw;
+    }
+
+    .medallasCar {
+        grid-template-rows: 40vw 20vw 20vw;
+    }
+
+    .carrera {
+        background-size: 95% 100%;
+        grid-template-rows: 17% 17% 10% 15% 8% 8% 9% 9%;
+    }
+
+    .personajeCar {
+        top: 15%;
+    }
+}

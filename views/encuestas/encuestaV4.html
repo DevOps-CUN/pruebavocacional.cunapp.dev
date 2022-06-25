@@ -1,0 +1,128 @@
+<section id="fondoEncuesta">
+    <form class="infoVista4" onsubmit="return getAnswersV4(event)">
+        <div class="vista4">
+            <div class="gridCarreras">
+                <div class="pregCar">
+                    <label class="preguntas" for="carreras">Si eres estudiante, escribe ¿Qué carrera estás
+                        estudiando?</label>
+                </div>
+                <div class="selectCar" id="selectCar">
+                    <label for="carreras"></label>
+                    <select id="NoEstudioUnaCarrera1" name="carreras" onchange="selectOnChange('#NoEstudioUnaCarrera1','#NoEstudioUnaCarrera2','.gridCarreras','.opcCar')" required>
+
+                        <option value="" disabled selected>Selecciona una opción</option>
+                        <option value="No estudio una carrera">No estudio una carrera</option>
+                        <option value="Negocios internacionales">Negocios internacionales</option>
+                        <option value="Contaduría pública">Contaduría pública</option>
+                        <option value="Derecho">Derecho</option>
+                        <option value="Ingeniería industrial">Ingeniería industrial</option>
+                        <option value="Administración de empresas">Administración de empresas</option>
+                        <option value="Administración de servicios de salud">Administración de servicios de salud
+                        </option>
+                        <option value="Administración de empresas agroindustriales">Administración de empresas
+                            agroindustriales</option>
+                        <option value="Seguridad social">Seguridad social</option>
+                        <option value="Administración deportiva">Administración deportiva</option>
+                        <option value="Administración pública">Administración pública</option>
+                        <option value="Administración turística y hotelera">Administración turística y hotelera</option>
+                        <option value="Ingeniería electrónica">Ingeniería electrónica</option>
+                        <option value="Ingeniería de sistemas">Ingeniería de sistemas</option>
+                        <option value="Diseño gráfico">Diseño gráfico</option>
+                        <option value="Dirección y producción de medios audiovisuales">Dirección y producción de medios
+                            audiovisuales</option>
+                        <option value="Diseño de modas">Diseño de modas</option>
+                        <option value="Comunicación social">Comunicación social</option>
+                        <option value="Publicidad y mercadeo">Publicidad y mercadeo</option>
+                        <option value="Otra">Otra</option>
+                    </select>
+                </div>
+                <div class="opcCar">
+                    <div class="labelOtro">
+                        <label class="preguntas" for="carreras2">¿Cuál?</label>
+                    </div>
+                    <div class="textOtro" id="textCar">
+                        <input id="NoEstudioUnaCarrera2" type="text" placeholder="Escribe aquí tu carrera..." name="carreras2" value="">
+                    </div>
+                </div>
+            </div>
+
+            <div class="gridCargos">
+                <div class="pregCag">
+                    <label class="preguntas" for="cargos">Si eres empleado/a, escribe ¿Cuál es el rango de tu cargo
+                        actual?</label>
+                </div>
+                <div class="textCag" id="textCag">
+                    <label for="cargos"></label>
+                    <select id="NoEstoyTrabajando1" name="cargos" onchange="selectOnChange('#NoEstoyTrabajando1','#NoEstoyTrabajando2','.gridCargos','.opcCag')" required>
+                        <option value="" disabled selected>Selecciona una opción</option>
+                        <option value="No estoy empleada/empleado">No estoy empleada/empleado</option>
+                        <option value="Independiente">Independiente</option>
+                        <option value="Aprendiz">Aprendiz</option>
+                        <option value="Auxiliar">Auxiliar</option>
+                        <option value="Asesor">Asesor</option>
+                        <option value="Analista">Analista</option>
+                        <option value="Ejecutivo">Ejecutivo</option>
+                        <option value="Especialista">Especialista</option>
+                        <option value="Coordinador">Coordinador</option>
+                        <option value="Director">Director</option>
+                        <option value="Otra">Otra</option>
+                    </select>
+                </div>
+                <div class="opcCag">
+                    <div class="labelOtro">
+                        <label class="preguntas" for="cargos2">¿Cuál?</label>
+                    </div>
+                    <div class="textOtro" id="textCar">
+                        <input id="NoEstoyTrabajando2" type="text" placeholder="Escribe aquí tu cargo..." name="cargos2" value="">
+                    </div>
+                </div>
+            </div>
+
+            <div class="gridEstratos">
+                <div class="estratos">
+                    <div class="pregEst">
+                        <label class="preguntas" for="estratos">Nivel socio-económico</label>
+                    </div>
+                    <div class="bajo">
+                        <p>Bajo</p>
+                    </div>
+                    <div class="opcEst0">
+                        <input id="estrato0" type="radio" name="estratos" value="Estrato 0" required>
+                        <label class="opcCircular" for="estrato0"></label>
+                    </div>
+                    <div class="opcEst1">
+                        <input id="estrato1" type="radio" name="estratos" value="Estrato 1" required>
+                        <label class="opcCircular" for="estrato1"></label>
+                    </div>
+                    <div class="opcEst2">
+                        <input id="estrato2" type="radio" name="estratos" value="Estrato 2" required>
+                        <label class="opcCircular" for="estrato2"></label>
+                    </div>
+                    <div class="opcEst3">
+                        <input id="estrato3" type="radio" name="estratos" value="Estrato 3" required>
+                        <label class="opcCircular" for="estrato3"></label>
+                    </div>
+                    <div class="opcEst4">
+                        <input id="estrato4" type="radio" name="estratos" value="Estrato 4" required>
+                        <label class="opcCircular" for="estrato4"></label>
+                    </div>
+                    <div class="opcEst5">
+                        <input id="estrato5" type="radio" name="estratos" value="Estrato 5" required>
+                        <label class="opcCircular" for="estrato5"></label>
+                    </div>
+                    <div class="opcEst6">
+                        <input id="estrato6" type="radio" name="estratos" value="Estrato 6" required>
+                        <label class="opcCircular" for="estrato6"></label>
+                    </div>
+                    <div class="alto">
+                        <p>Alto</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="botonV4">
+                <input type="submit" value=""></input>
+            </div>
+        </div>
+    </form>
+</section>

@@ -1,0 +1,172 @@
+.infoVista13 {
+    display: grid;
+    width: 100%;
+    margin: auto;
+    grid-template-columns: 0.1fr 1.8fr 0.1fr;
+    grid-template-rows: 10px auto 10px;
+    gap: 0px 0px;
+    grid-template-areas:
+        ". . ."
+        ". vista13 ."
+        ". . .";
+}
+
+.vista13 {
+    display: grid;
+    position: relative;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 2vw auto auto 2vw;
+    gap: 0px 0px;
+    grid-template-areas:
+        "tituloV13 tituloV13 tituloV13"
+        "baseV13 baseV13 baseV13"
+        "baseV13 baseV13 baseV13"
+        "botonV13 botonV13 botonV13";
+    grid-area: vista13;
+}
+
+.tituloV13 {
+    grid-area: tituloV13;
+    position: absolute;
+    left: 50%;
+    top: 100%;
+    transform: translate(-50%, -50%);
+    width: 60%;
+    margin: auto;
+    text-align: center;
+    z-index: 2;
+}
+
+.tituloV13 p{
+    color: white;
+    background-color: #5B0060;
+    border-radius: 5px;
+    box-shadow: 0 6px 6px -6px rgb(126, 126, 126, 0.6);
+    padding: 15px 10px;
+    font-size: 15px;
+    font-family: montserratLight;
+}
+
+.baseV13 {
+    display: grid;
+    position: relative;
+    width: 85%;
+    margin: auto;
+    background-color: #F7F7F7;
+    border-radius: 20px;
+    box-shadow: var(--shadow);
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto;
+    gap: 0px 0px;
+    grid-template-areas:
+        "tituloBaseV13"
+        "textoBaseV13";
+    grid-area: baseV13;
+}
+
+.tituloBaseV13{
+    grid-area: tituloBaseV13;
+    padding: 20px 0;
+    width: 90%;
+    margin: 20px auto 0 auto;
+    text-align: center;
+}
+
+.tituloBaseV13 h3{
+    color: #5B0060;
+    font-family: throwBold;
+    font-size: 24px;
+}
+
+.textoBaseV13 {
+    grid-area: textoBaseV13;
+    padding: 0 0 30px 0;
+    height: 100%;
+    width: 70%;
+    margin: 0 auto 20px auto;
+    text-align: center;
+}
+
+.textoBaseV13 p{
+    color: #000000;
+    font-size: 16px;
+    font-family: montserratLight;
+    text-align: center;
+}
+
+.botonV13 {
+    grid-area: botonV13;
+    position: absolute;
+    left: 50%;
+    top: 30%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    margin: auto;
+    text-align: center;
+}
+
+.botonV13 input[type=submit] {
+    background-image: url('../../img/encuesta/BOTON_S.svg');
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-color: transparent;
+    padding: 1.4% 3px;
+    border: none;
+    width: 22%;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+}
+
+.botonV13 input[type=submit]:hover {
+    transform: scale(1.05);
+}
+  
+@media screen and (max-width: 1024px) {
+    .baseV13 {
+        width: 95%;
+    }
+
+    .textoBaseV13 p{
+        font-size: 16px;
+    }
+
+    .botonV13 input[type=submit] {
+        width: 24%;
+        height: 4vw;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    
+    .infoVista13 {
+        grid-template-columns: 0.05fr 2.9fr 0.05fr;
+    }
+
+    .tituloV13 {
+        width: 80%;
+    }
+
+    .baseV13 {
+        width: 90%;
+    }
+
+    .textoBaseV13 p{
+        font-size: 16px;
+    }
+
+    .botonV13 input[type=submit] {
+      width: 26%;
+      height: 5vw;
+    }
+}
+  
+@media screen and (max-width: 540px) {
+    .textoBaseV13 p{
+        font-size: 15px;
+    }
+
+    .botonV13 input[type=submit] {
+        width: 46%;
+        height: auto;
+    }
+}

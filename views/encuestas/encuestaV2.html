@@ -1,0 +1,65 @@
+<section id="fondoEncuesta">
+    <div class="infoVista2">
+        <form class="vista2" onsubmit="return getAnswersV2(event)">
+            <div class="nombreLab">
+                <label class="preguntas" for="nombre">Nombres:</label>
+            </div>
+            <div class="nombreInp">
+                <input type="text" id="nombre" name="nombre" value="" required>
+            </div>
+            <div class="apellidoLab">
+                <label class="preguntas" for="apellido">Apellidos:</label>
+            </div>
+            <div class="apellidoInp">
+                <input type="text" id="apellido" name="apellido" value="" required>
+            </div>
+            <div class="ccLab">
+                <label class="preguntas" for="cc">Número de documento:<p>(sin puntos, ni espacios ni comas)</p></label>
+            </div>
+            <div class="ccInp">
+                <input type="number" id="cc" name="cc" value="" required>
+            </div>
+            <div class="generoLab">
+                <label class="preguntas" for="genero">¿Cúal es tu Género?</label>
+            </div>
+            <div class="generoInp">
+                <input id="Mujer" type="radio" name="genero" value="Mujer" required>
+                <label class="opciones" for="Mujer">Mujer</label>
+
+                <input id="Hombre" type="radio" name="genero" value="Hombre" required>
+                <label class="opciones" for="Hombre">Hombre</label>
+                
+                <input id="Otro" type="radio" name="genero" value="Otro" required>
+                <label class="opciones" for="Otro">Otro</label>
+            </div>
+            <div class="colorLab">
+                <label class="preguntas" for="color">¿Cúal de estos colores se parece más a tu piel?</label>
+            </div>
+            <div class="colorInp">
+                <input id="CLARO" type="radio" name="color" value="CLARO" required>
+                <label id="opcionColor1" for="CLARO"></label>
+
+                <input id="MEDIO" type="radio" name="color" value="MEDIO" required>
+                <label id="opcionColor2" for="MEDIO"></label>
+
+                <input id="OSCURO" type="radio" name="color" value="OSCURO" required>
+                <label id="opcionColor3" for="OSCURO"></label>
+            </div>
+            <div class="edadLab">
+                <label class="preguntas" for="edad">Edad:</label>
+            </div>
+            <div class="edadInp">
+                <input type="number" id="edad" name="edad" value="" min="0" max="80" required>
+            </div>
+            <div class="numeroLab">
+                <label class="preguntas" for="numero">Número de celular:<p>(formato: 3123546789)</p></label>
+            </div>
+            <div class="numeroInp">
+                <input type="tel" id="numero" name="numero" value="" minlength="10" maxlength="10" pattern="[3-3]{1}[0-9]{9}" required>
+            </div>
+            <div class="botonV2">
+                <input type="submit" value=""></input>
+            </div>
+        </form>
+    </div>
+</section>

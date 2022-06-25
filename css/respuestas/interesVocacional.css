@@ -1,0 +1,314 @@
+#fondoIntVocacional {
+    background-image: url("../../img/interesVocacional/FONDO.png");
+    background-attachment: scroll;
+    background-position: left bottom;
+    background-repeat: no-repeat;
+    background-size: 103.5% 103.5%;
+    min-height: 100%;
+    position: relative;
+}
+
+.grid-containerVocacional {
+    display: grid;
+    position: relative;
+    grid-template-columns: 30% 35% 35%;
+    grid-template-rows: 40px 40vw 65vw 110px;
+    gap: 0px 0px;
+    height: 100%;
+}
+
+.vocacional {
+    display: grid;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background-image: url("../../img/interesVocacional/BASE.png");
+    background-size: 97% 100%;
+    background-position: center top;
+    background-repeat: no-repeat;
+    grid-template-columns: 16.6% 16.6% 16.6% 16.6% 16.6% 16.6%;
+    grid-template-rows: 12.5% 12.5% 12.5% 12.5% 13% 13% 12% 12%;
+    gap: 0px 0px;
+    grid-template-areas:
+        "medallasVoc medallasVoc medallasVoc medallasVoc medallasVoc medallasVoc"
+        "medallasVoc medallasVoc medallasVoc medallasVoc medallasVoc medallasVoc"
+        "medallasVoc medallasVoc medallasVoc medallasVoc medallasVoc medallasVoc"
+        "porcentajesVoc porcentajesVoc porcentajesVoc porcentajesVoc porcentajesVoc porcentajesVoc"
+        "porcentajesVoc porcentajesVoc porcentajesVoc porcentajesVoc porcentajesVoc porcentajesVoc"
+        "porcentajesVoc porcentajesVoc porcentajesVoc porcentajesVoc porcentajesVoc porcentajesVoc"
+        "botones botones botones botones botones botones"
+        "botones botones botones botones botones botones"
+        "botones botones botones botones botones botones";
+    grid-area: 2 / 2 / 4 / 4;
+}
+
+.porcentajesVoc {
+    grid-area: porcentajesVoc;
+    display: grid;
+    position: relative;
+    grid-template-columns: 1fr 1.1fr 0.9fr 0.9fr 1.1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1.6fr 0.8fr 0.6fr;
+    gap: 0px 0px;
+    width: 85%;
+    height: 100%;
+    margin: 0 auto;
+}
+
+.porcentajesVoc img {
+    width: 13vw;
+}
+
+.practicoVoc {
+    grid-area: 1 / 1 / 3 / 3;
+    text-align: center;
+    position: absolute;
+    text-align: center;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.dinamicoVoc {
+    grid-area: 2 / 2 / 4 / 4;
+    text-align: center;
+    position: absolute;
+    text-align: center;
+    left: 58%;
+    top: 55%;
+    transform: translate(-50%, -50%);
+}
+
+.atentoVoc {
+    grid-area: 3 / 1 / 5 / 3;
+    text-align: center;
+    position: absolute;
+    text-align: center;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.adaptableVoc {
+    grid-area: 3 / 4 / 5 / 6;
+    text-align: center;
+    position: absolute;
+    text-align: center;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.metodicoVoc {
+    grid-area: 1 / 4 / 3 / 6;
+    text-align: center;
+    position: absolute;
+    text-align: center;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.imaginativoVoc {
+    grid-area: 2 / 5 / 4 / 7;
+    text-align: center;
+    position: absolute;
+    text-align: center;
+    left: 58%;
+    top: 55%;
+    transform: translate(-50%, -50%);
+}
+
+.practicoVoc img,
+.dinamicoVoc img,
+.atentoVoc img,
+.adaptableVoc img,
+.metodicoVoc img,
+.imaginativoVoc img {
+    width: 15vw;
+}
+
+.mensajePersVoc {
+    grid-area: 5 / 1 / 6 / 7;
+    font-family: montserratLight;
+    color: black;
+    font-size: 1.3vw;
+    text-align: center;
+    margin: auto;
+}
+
+.mensajeVoc {
+    grid-area: 6 / 1 / 7 / 7;
+    font-family: throwBold;
+    color: black;
+    font-size: 2.3vw;
+    text-align: center;
+}
+
+.background {
+    grid-area: 1 / 1 / 5 / 7;
+    background-image: url("../../img/interesVocacional/BASE_PORCENTAJES.svg");
+    background-position: top;
+    background-size: 100% 95%;
+    background-repeat: no-repeat;
+}
+
+#txtAtentoVoc,
+#txtDinamicoVoc,
+#txtMetodicoVoc,
+#txtImaginativoVoc,
+#txtAdaptableVoc,
+#txtPracticoVoc {
+    font-family: throwBold;
+    color: #ffff;
+    font-size: 4.5vw;
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.medallasVoc {
+    display: grid;
+    position: relative;
+    grid-template-columns: 16.6% 16.7% 16.7% 15% 12% 23%;
+    grid-template-rows: 20vw 20vw;
+    gap: 0px 0px;
+    grid-template-areas:
+        "interes interes interes medalla1 medalla2 nombre"
+        "interes interes interes personajeVoc personajeVoc personajeVoc"
+        "interes interes interes personajeVoc personajeVoc personajeVoc";
+    grid-area: medallasVoc;
+}
+
+.interes {
+    grid-area: interes;
+    text-align: right;
+    height: 100%;
+    margin-top: -2%;
+}
+
+.interes img {
+    width: 85%;
+}
+
+.personajeVoc {
+    grid-area: personajeVoc;
+    position: absolute;
+    text-align: center;
+    left: 63%;
+    top: 40%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+}
+
+.personajeVoc img {
+    width: 58%;
+}
+
+@media screen and (max-width: 1024px) {
+    .grid-containerVocacional {
+        grid-template-rows: 40px 40vw 75vw 90px;
+    }
+
+    .practicoVoc img,
+    .dinamicoVoc img,
+    .atentoVoc img,
+    .adaptableVoc img,
+    .metodicoVoc img,
+    .imaginativoVoc img {
+        width: 16vw;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    #fondoIntVocacional {
+        background-size: 150% 90%;
+    }
+
+    .grid-containerVocacional {
+        grid-template-rows: 40px 55vw 90vw 80px;
+        grid-template-columns: 0% 50% 50%;
+    }
+
+    .practicoVoc img,
+    .dinamicoVoc img,
+    .atentoVoc img,
+    .adaptableVoc img,
+    .metodicoVoc img,
+    .imaginativoVoc img {
+        width: 22vw;
+    }
+
+    .personajeVoc img {
+        width: 55%;
+    }
+
+    .mensajePersVoc {
+        font-size: 1.7vw;
+    }
+
+    #txtAtentoVoc,
+    #txtDinamicoVoc,
+    #txtMetodicoVoc,
+    #txtImaginativoVoc,
+    #txtAdaptableVoc,
+    #txtPracticoVoc {
+        font-size: 5.5vw;
+    }
+
+    .medallasVoc {
+        grid-template-rows: 28vw 20vw;
+    }
+
+    .puntaje1,
+    .puntaje2,
+    .puntaje3 {
+        font-size: 2.3vw;
+    }
+
+    .vocacional {
+        margin-top: 3%;
+    }
+}
+
+@media screen and (max-width: 540px) {
+    #fondoIntVocacional {
+        background-size: 250% 90%;
+        height: 175vw;
+    }
+
+    .grid-containerVocacional {
+        grid-template-rows: 10% 40% 40% 10%;
+    }
+
+    .mensajePersVoc {
+        font-size: 2.2vw;
+    }
+
+    .practicoVoc img,
+    .dinamicoVoc img,
+    .atentoVoc img,
+    .adaptableVoc img,
+    .metodicoVoc img,
+    .imaginativoVoc img {
+        width: 23vw;
+    }
+
+    .vocacional {
+        background-size: 95% 100%;
+        grid-template-rows: 12.5% 12.5% 12.5% 12.5% 15% 15% 10% 10%;
+    }
+
+    .puntaje1,
+    .puntaje2,
+    .puntaje3 {
+        font-size: 2.3vw;
+    }
+
+    .mensajeVoc {
+        font-size: 2.5vw;
+    }
+}

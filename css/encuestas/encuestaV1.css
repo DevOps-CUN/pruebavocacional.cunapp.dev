@@ -1,0 +1,303 @@
+#fondoEncuesta {
+    background-image: url('../../img/encuesta/FONDO.png');
+    background-attachment: scroll;
+    background-repeat: no-repeat;
+    background-position: top left;
+    background-size: 100% 100%;
+    min-height: 100%;
+    width: 100%;
+    position: relative;
+    display: flex;
+}
+
+.vista1 {
+    display: grid;
+    width: 100%;
+    margin: auto;
+    grid-template-columns: 5% 90% 5%;
+    grid-template-rows: 20px auto 30px;
+    gap: 0px 0px;
+    grid-template-areas:
+      ". . ."
+      ". infoVista1 ."
+      ". . .";
+}
+
+.infoVista1 {
+    display: grid;
+    position: relative;
+    width: 100%;
+    margin: auto;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    gap: 0px 0px;
+    grid-template-areas:
+        "titulo titulo"
+        "subtitulo subtitulo"
+        "texto1V1 texto1V1"
+        "email placeholder"
+        "texto2V1 texto2V1"
+        "botonV1 botonV1";
+    background-color: var(--background);
+    box-shadow: var(--shadow);
+    border-radius: 20px;
+    grid-area: infoVista1;
+}
+
+.titulo{
+    grid-area: titulo;
+    width: 90%;
+    margin: auto;
+}
+
+.titulo h2{
+    font-family: throwBold;
+    color: var(--titulos);
+    font-size: var(--tituloTV);
+    text-align: center;
+    margin: 0.4em auto 0;
+}
+
+.titulo hr{
+    width: 20vw;
+    border: 0.5px solid var(--titulos);
+    margin: 0 auto;
+}
+
+.subtitulo{
+    grid-area: subtitulo;
+    width: 90%;
+    margin: auto;
+}
+
+.subtitulo h4 {
+    font-family: montserratLight;
+    font-size: 1vw;
+    color: var(--subtitulos);
+    text-align: center;
+    letter-spacing: 3px;
+    font-style: oblique;
+    margin: 0.4em auto;
+}
+
+.texto1V1{
+    grid-area: texto1V1;
+    font-family: montserratLight;
+    font-size: var(--textTV);
+    color: var(--subtitulos);
+    text-align: center;
+    width: 90%;
+    margin: 1.5em auto;
+}
+
+.texto2V1{
+    grid-area: texto2V1;
+    font-family: montserratLight;
+    font-size: var(--textTV);
+    color: var(--subtitulos);
+    text-align: center;
+    width: 90%;
+    margin: 2em auto 3.5em;;
+}
+
+.email{
+    grid-area: email;
+    text-align: right;
+    width: 90%;
+    margin: auto;
+}
+
+.email label{
+    font-family: montserrat;
+    font-style: oblique;
+    font-size: 1.2vw;
+    font-weight: 900;
+    color: var(--titulos);
+}
+
+.placeholder {
+    grid-area: placeholder;
+    width: 90%;
+    height: 100%;
+    margin: auto;
+}
+
+.placeholder input{
+    background-color: transparent;
+    font-family: montserrat;
+    border: 1px solid var(--titulos);
+    border-radius: 20px;
+    text-align: center;
+    width: 70%;
+    height: 100%;
+}
+
+.botonV1 {
+    grid-area: botonV1;
+    position: absolute;
+    left: 50%;
+    top: 100%;
+    transform: translate(-50%,-50%);
+    width: 100%;
+    margin: auto;
+    text-align: center;
+}
+
+.botonV1 input[type=submit]{
+    background-image: url('../../img/encuesta/BOTON_S.svg');
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-color: transparent;
+    padding: 1.4% 3px;
+    border: none;
+    width: 22%;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+}
+
+.botonV1 input[type=submit]:hover{
+    transform: scale(1.05);
+}
+
+@media screen and (max-width: 1024px) {
+
+    .vista1 {
+        grid-template-rows: 20px auto 50px;
+    }
+
+    .titulosV1{
+        grid-template-rows: 35% 10% 55%;
+    }
+
+    .titulo h2{
+        font-size: var(--tituloLap);
+    }
+    
+    .titulo hr{
+        width: 30vw;
+        border: 1px solid var(--titulos);
+        margin: 0 auto;
+    }
+    
+    .subtitulo h4 {
+        font-size: 1.5vw;
+    }
+
+    .texto1V1, .texto2V1{
+        font-size: var(--textLap);
+        width: 95%;
+    }
+
+    .email label{
+        font-size: 2vw;
+    }
+    
+    .placeholder input{
+        height: 95%;
+        width: 80%;
+    }
+    
+    .botonV1 input[type=submit] {
+        width: 22vw;
+        height: 4.5vw;
+        font-size: var(--btnLap);
+        border-radius: 7px;
+    } 
+
+}
+
+@media screen and (max-width: 767px) {
+    #fondoEncuesta {
+        background-size: 150% 100%;
+    }
+
+    .titulosV1{
+        grid-template-rows: 35% 10% 55%;
+    }
+
+    .titulo h2{
+        font-size: var(--tituloTab);
+    }
+    
+    .titulo hr{
+        width: 30vw;
+        border: 1px solid var(--titulos);
+        margin: 0 auto;
+    }
+    
+    .subtitulo h4 {
+        font-size: 2vw;
+    }
+
+    .texto1V1, .texto2V1{
+        font-size: var(--textTab);
+        width: 95%;
+    }
+
+    .email label{
+        font-size: 2.1vw;
+    }
+    
+    .placeholder input{
+        height: 95%;
+        width: 80%;
+    }
+    
+    .botonV1 input[type=submit] {
+        width: 25vw;
+        height: 5.5vw;
+        font-size: var(--btnTab);
+        border-radius: 7px;
+    } 
+
+}
+
+@media screen and (max-width: 540px) {
+    #fondoEncuesta {
+        background-size: 250% 100%;
+    }
+
+    .titulosV1{
+        grid-template-rows: 35% 10% 55%;
+    }
+
+    .titulo h2{
+        font-size: var(--tituloMob);
+    }
+    
+    .titulo hr{
+        width: 30vw;
+        border: 1px solid var(--titulos);
+        margin: 0 auto;
+    }
+    
+    .subtitulo h4 {
+        font-size: 2vw;
+    }
+
+    .texto1V1, .texto2V1{
+        font-size: var(--textMob);
+        width: 95%;
+    }
+
+    .email label{
+        font-size: 2.3vw;
+    }
+    
+    .placeholder{
+        margin: auto 0;
+    }
+
+    .placeholder input{
+        height: 90%;
+        width: 100%;
+        font-size: 2.3vw;
+    }
+    
+    .botonV1 input[type=submit] {
+        width: 30vw;
+        height: 7vw;
+        font-size: var(--btnMob);
+        border-radius: 7px;
+    } 
+}

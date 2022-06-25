@@ -1,0 +1,152 @@
+.infoVista14 {
+    display: grid;
+    width: 100%;
+    margin: auto;
+    grid-template-columns: 0.1fr 1.8fr 0.1fr;
+    grid-template-rows: 10px auto 10px;
+    gap: 0px 0px;
+    grid-template-areas:
+        ". . ."
+        ". vista14 ."
+        ". . .";
+}
+
+.vista14 {
+    display: grid;
+    position: relative;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 49% 49% 2%;
+    gap: 0px 0px;
+    grid-template-areas:
+        "baseV14 baseV14 baseV14"
+        "baseV14 baseV14 baseV14"
+        "botonV14 botonV14 botonV14";
+    grid-area: vista14;
+}
+
+.baseV14 {
+    display: grid;
+    position: relative;
+    width: 85%;
+    margin: auto;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1.3fr 1fr 0.74fr;
+    gap: 0px 0px;
+    grid-template-areas:
+        ". . ."
+        "comV14 comV14 comV14"
+        ". . .";
+    grid-area: baseV14;
+}
+
+.imgFondoV14 {
+    grid-area: 1 / 1 / 4 / 4;
+}
+
+.imgFondoV14 img {
+    max-width: 100%;
+    min-width: 99%;
+}
+
+.comV14 {
+    grid-area: 2 / 1 / 3 / 4;
+    position: relative;
+    height: 100%;
+    width: 90%;
+    margin: auto;
+    text-align: center;
+}
+
+.comV14 label{
+    opacity: 0;
+    position: fixed;
+    width: 1px;
+}
+
+.comV14 input{
+    width: 100%;
+    height: 100%;
+    margin: auto;
+    font-family: montserrat;
+    font-size: 1.1vw;
+    text-align: center;
+    word-wrap: break-word;
+    background-color: transparent;
+    border: 1.5px solid var(--titulos);
+    border-radius: 7px;
+}
+
+.botonV14 {
+    grid-area: botonV14;
+    position: absolute;
+    left: 50%;
+    top: 30%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    margin: auto;
+    text-align: center;
+}
+
+.botonV14 input[type=submit] {
+    background-image: url('../../img/encuesta/BOTON_F.png');
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-color: transparent;
+    padding: 1.4% 3px;
+    border: none;
+    width: 22%;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+}
+
+.botonV14 input[type=submit]:hover {
+    transform: scale(1.05);
+}
+  
+@media screen and (max-width: 1024px) {
+    .baseV14 {
+        width: 95%;
+    }
+
+    .comV14 input {
+        font-size: 1.4vw;
+    }
+
+    .botonV14 input[type=submit] {
+        width: 24%;
+        height: 4vw;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    
+    .infoVista14 {
+        grid-template-columns: 0.05fr 2.9fr 0.05fr;
+    }
+
+    .baseV14 {
+        width: 100%;
+    }
+
+    .comV14 input {
+        font-size: 1.5vw;
+    }
+
+    .botonV14 input[type=submit] {
+      width: 26%;
+      height: 5vw;
+    }
+}
+  
+@media screen and (max-width: 540px) {
+
+    .comV14 input {
+        font-size: 1.6vw;
+        height: 95%;
+    }
+
+    .botonV14 input[type=submit] {
+        width: 28%;
+        height: 6vw;
+    }
+}

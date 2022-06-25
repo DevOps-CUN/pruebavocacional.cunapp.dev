@@ -1,0 +1,101 @@
+.infoVista11 {
+    display: grid;
+    width: 100%;
+    margin: auto;
+    grid-template-columns: 0.1fr 1.8fr 0.1fr;
+    grid-template-rows: 5px auto 5px;
+    gap: 0px 0px;
+    grid-template-areas:
+        ". . ."
+        ". vista11 ."
+        ". . .";
+}
+
+.vista11 {
+    display: grid;
+    position: relative;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 99% 1%;
+    gap: 0px 0px;
+    grid-template-areas:
+        "resumenPro resumenPro"
+        "botonV11 botonV11";
+    grid-area: vista11;
+}
+
+.resumenPro{
+    grid-area: resumenPro;
+    width: 90%;
+    margin: auto;
+}
+
+.resumenPro img{
+    max-width: 100%;
+}
+
+.botonV11 {
+    grid-area: botonV11;
+    position: absolute;
+    left: 50%;
+    top: 20%;
+    transform: translate(-50%,-50%);
+    width: 100%;
+    margin: auto;
+    text-align: center;
+}
+
+.botonV11 input[type=submit]{
+    background-image: url('../../img/encuesta/BOTON_S.svg');
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-color: transparent;
+    padding: 1.4% 3px;
+    border: none;
+    width: 22%;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+}
+
+.botonV11 input[type=submit]:hover{
+    transform: scale(1.05);
+}
+
+
+@media screen and (max-width: 1024px) {
+    .infoVista11 {
+        grid-template-columns: 0.05fr 2.9fr 0.05fr;
+    }
+
+    .resumenPro {
+        width: 95%;
+    }
+
+    .botonV11 input[type=submit]{
+        font-size: var(--btnTV);
+        width: 24%;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .vista11 {
+        grid-template-rows: auto 6vw;
+    }
+
+    .resumenPro {
+        width: 100%;
+    }
+
+    .botonV11 input[type=submit]{
+        font-size: var(--btnTab);
+        width: 26%;
+        height: 5.5vw;
+    }
+}
+
+@media screen and (max-width: 540px) {
+    .botonV11 input[type=submit]{
+        font-size: var(--btnMob);
+        width: 28%;
+        height: 5vw;
+    }
+}

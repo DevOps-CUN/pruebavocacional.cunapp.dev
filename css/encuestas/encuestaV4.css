@@ -1,0 +1,599 @@
+.infoVista4 {
+    display: grid;
+    width: 100%;
+    margin: auto;
+    grid-template-columns: 0.1fr 1.8fr 0.1fr;
+    grid-template-rows: 20px auto 5px;
+    gap: 0px 0px;
+    grid-template-areas:
+        ". . ."
+        ". vista4 ."
+        ". . .";
+}
+
+.vista4 {
+    display: grid;
+    width: 100%;
+    position: relative;
+    grid-template-columns: auto auto;
+    grid-template-rows: 8vw 8vw 10vw 4vw;
+    gap: 10px 0px;
+    grid-template-areas:
+        "gridCarreras gridCarreras"
+        "gridCargos gridCargos"
+        "gridEstratos gridEstratos"
+        "botonV4 botonV4";
+    grid-area: vista4;
+    font-size: var(--textTV);
+}
+
+.vista4 input[type=radio] {
+    opacity: 0;
+    position: fixed;
+    width: 1px;
+}
+
+.vista4 select{
+    background-color: transparent;
+    border: 1px solid var(--titulos);
+    border-radius: 20px;
+    text-align: center;
+    height: 3vw;
+    width: 80%;
+    padding: 0;
+    font-family: montserrat;
+}
+
+.vista4 input[type=text]{
+    background-color: transparent;
+    border: 1px solid var(--titulos);
+    border-radius: 20px;
+    text-align: center;
+    height: 3vw;
+    width: 80%;
+    padding: 0;
+    font-family: montserrat;
+}
+
+.vista4 .opciones{
+    display: block;
+    position: relative;
+    width: 90%;
+    height: 3vw;
+    margin: auto;
+    background-color: transparent;
+    border: 1px solid var(--titulos);
+    border-radius: 25px;
+    cursor: pointer;
+    transition: all .2s ease-in-out; 
+}
+
+.vista4 .opciones p{
+    position: absolute;
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    font-family: montserratLight;
+    padding: 0;
+}
+
+.vista4 .opcCircular{
+    display: block;
+    position: relative;
+    width: 3.8vw;
+    height: 3.8vw;
+    margin: auto;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.gridCarreras .preguntas, .gridCargos .preguntas, .gridEstratos .preguntas, .gridAsignaturas .preguntas , .gridCodigos .preguntas{
+    font-family: montserrat;
+    font-style: oblique;
+    color: var(--titulos);
+}
+
+.gridCarreras{
+    display: grid;
+    position: relative;
+    text-align: center;
+    background-color: var(--background);
+    box-shadow: var(--shadow);
+    border-radius: 20px;
+    grid-template-columns: 100%;
+    grid-template-rows: auto auto;
+    gap: 0px 0px;
+    grid-template-areas:
+        "pregCar pregCar"
+        "selectCar opcCar";
+    grid-area: gridCarreras;
+    height: 90%;
+}
+
+.pregCar{
+    grid-area: pregCar;
+    width: 95%;
+    margin: auto;
+}
+
+.selectCar{
+    grid-area: selectCar;
+    width: 95%;
+    margin: 0 auto;
+    text-align: center;
+    transition: all .2s ease-in-out; 
+}
+
+.opcCar{
+    display: none;
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+    grid-template-columns: 10% 90%;
+    grid-template-rows: auto;
+    gap: 0px 0px;
+    grid-template-areas:
+        "labelOtro textOtro";
+    grid-area: opcCar;
+    transition: all .2s ease-in-out; 
+}
+
+.labelOtro {
+    width: 90%;
+    margin: 0 auto;
+}
+
+.textOtro {
+    width: 100%;
+    margin: 0 auto;
+}
+
+.gridCargos{
+    display: grid;
+    text-align: center;
+    background-color: var(--background);
+    box-shadow: var(--shadow);
+    border-radius: 20px;
+    grid-template-columns: 100% 0%;
+    grid-template-rows: auto auto;
+    gap: 0px 0px;
+    grid-template-areas:
+        "pregCag pregCag"
+        "textCag opcCag";
+    grid-area: gridCargos;
+    height: 90%;
+}
+
+.pregCag{
+    grid-area: pregCag;
+    width: 95%;
+    margin: auto;
+}
+
+.textCag{
+    grid-area: textCag;
+    width: 95%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.opcCag {
+    display: none;
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+    grid-template-columns: 10% 90%;
+    grid-template-rows: auto;
+    gap: 0px 0px;
+    grid-template-areas:
+        "labelOtro textOtro";
+    grid-area: opcCag;
+    transition: all .2s ease-in-out; 
+}
+
+.gridEstratos{
+    display: grid;
+    height: 90%;
+    width: 100%;
+    text-align: center;
+    background-color: var(--background);
+    box-shadow: var(--shadow);
+    border-radius: 20px;
+    grid-template-columns: 100%;
+    grid-template-rows: auto;
+    gap: 0px 0px;
+    grid-template-areas:
+        "estratos";
+    grid-area: gridEstratos;
+}
+
+.estratos{
+    display: grid;
+    width: 70%;
+    height: 90%;
+    margin: auto;
+    text-align: center;
+    grid-template-columns: 11.1% 11.1% 11.1% 11.1% 11.1% 11.1% 11.1% 11.1% 11.1%;
+    grid-template-rows: auto;
+    gap: 0px 0px;
+    grid-template-areas:
+        "pregEst pregEst pregEst pregEst pregEst pregEst pregEst pregEst pregEst"
+        "bajo opcEst0 opcEst1 opcEst2 opcEst3 opcEst4 opcEst5 opcEst6 alto";
+    grid-area: estratos;
+}
+
+.pregEst{
+    grid-area: pregEst;
+    width: 95%;
+    margin: auto;
+}
+
+.bajo{
+    grid-area: bajo;
+    font-family: montserrat;
+    font-size: 1vw;
+    font-style: oblique;
+    width: 95%;
+    margin: auto;
+}
+
+.opcEst0{
+    grid-area: opcEst0;
+    width: 100%;
+    margin: auto;
+    text-align: center;
+}
+
+.opcEst0 label {
+    background-image: url('../../img/encuesta/VISTA4/0.png');
+    background-size: 200% 100%;
+    background-repeat: no-repeat;
+}
+
+.opcEst1{
+    grid-area: opcEst1;
+    width: 100%;
+    margin: auto;
+    text-align: center;
+}
+
+.opcEst1 label {
+    background-image: url('../../img/encuesta/VISTA4/1.png');
+    background-size: 200% 100%;
+    background-repeat: no-repeat;
+}
+
+.opcEst2{
+    grid-area: opcEst2;
+    width: 100%;
+    margin: auto;
+    text-align: center;
+} 
+
+.opcEst2 label {
+    background-image: url('../../img/encuesta/VISTA4/2.png');
+    background-size: 200% 100%;
+    background-repeat: no-repeat;
+}
+
+.opcEst3{
+    grid-area: opcEst3;
+    width: 100%;
+    margin: auto;
+    text-align: center;
+} 
+
+.opcEst3 label {
+    background-image: url('../../img/encuesta/VISTA4/3.png');
+    background-size: 200% 100%;
+    background-repeat: no-repeat;
+}
+
+.opcEst4{
+    grid-area: opcEst4;
+    width: 100%;
+    margin: auto;
+    text-align: center;
+} 
+
+.opcEst4 label {
+    background-image: url('../../img/encuesta/VISTA4/4.png');
+    background-size: 200% 100%;
+    background-repeat: no-repeat;
+}
+
+.opcEst5{
+    grid-area: opcEst5;
+    width: 100%;
+    margin: auto;
+    text-align: center;
+} 
+
+.opcEst5 label {
+    background-image: url('../../img/encuesta/VISTA4/5.png');
+    background-size: 200% 100%;
+    background-repeat: no-repeat;
+}
+
+.opcEst6{
+    grid-area: opcEst6;
+    width: 100%;
+    margin: auto;
+    text-align: center;
+}
+
+.opcEst6 label {
+    background-image: url('../../img/encuesta/VISTA4/6.png');
+    background-size: 200% 100%;
+    background-repeat: no-repeat;
+}
+
+.opcEst0 input[type="radio"]:checked+label, 
+.opcEst1 input[type="radio"]:checked+label, 
+.opcEst2 input[type="radio"]:checked+label, 
+.opcEst3 input[type="radio"]:checked+label,
+.opcEst4 input[type="radio"]:checked+label,
+.opcEst5 input[type="radio"]:checked+label,
+.opcEst6 input[type="radio"]:checked+label{
+    background-position: right;
+    transition: all 0s ease-in-out; 
+    transform: scale(1.1);
+} 
+
+.alto{
+    grid-area: alto;
+    font-family: montserrat;
+    font-size: 1vw;
+    font-style: oblique;
+    width: 95%;
+    margin: auto;
+}
+
+.gridCarreras input[type="radio"]:checked+label,
+.gridCargos input[type="radio"]:checked+label,
+.gridAsignaturas input[type="radio"]:checked+label,
+.gridCodigos input[type="radio"]:checked+label {
+    background-color: var(--titulos);
+    color: white;
+    border: 1px solid var(--titulos);
+    transform: scale(1.05);
+}
+
+.gridCarreras input[type="radio"]:hover,
+.gridCargos input[type="radio"]:hover,
+.gridAsignaturas input[type="radio"]:hover,
+.gridCodigos input[type="radio"]:hover {
+    background-color: var(--titulos);
+    color: white;
+    border: 1px solid var(--titulos);
+    transform: scale(1.05);
+}
+
+.gridEstratos .opcCircular:hover {
+    transform: scale(1.05);
+    transition: all .2s ease-in-out; 
+}
+  
+.vista4 .opciones:hover {
+    background-color: var(--titulos);
+    color: white;
+    transform: scale(1.05);
+}
+
+.botonV4 {
+    grid-area: botonV4;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    width: 100%;
+    margin: auto;
+    text-align: center;
+}
+
+.botonV4 input[type=submit]{
+    background-image: url('../../img/encuesta/BOTON_S.svg');
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-color: transparent;
+    padding: 1.4% 3px;
+    border: none;
+    width: 22%;
+    cursor: pointer;
+    transition: all .2s ease-in-out;
+}
+
+.botonV4 input[type=submit]:hover{
+    transform: scale(1.05);
+}
+
+
+@media screen and (max-width: 1024px) {
+    .vista4 {
+        grid-template-rows: 12vw 12vw 12vw 4vw;
+    }
+    
+    .vista4 select{
+        height: 3vw;
+        font-size: 1.2vw;
+    }
+
+    .vista4 .opcCircular{
+        width: 5vw;
+        height: 5vw;
+    }
+
+    .vista4 input[type=text] {
+        height: 3vw;
+        font-size: 1.2vw;
+    }
+
+    .gridCarreras .preguntas, .gridCargos .preguntas, .gridEstratos .preguntas, .gridAsignaturas .preguntas , .gridCodigos .preguntas{
+        font-size: var(--textLap);
+    }
+}
+
+@media screen and (max-width: 767px) {
+
+    .infoVista4 {
+        min-height: 110%;
+        grid-template-columns: 0.1fr 1.8fr 0.1fr;
+        grid-template-rows: 40px auto 20px;
+        margin: auto;
+        position: relative;
+        top: auto;
+        left: auto;
+        transform: unset;
+    }
+
+    
+    .vista4 {
+        grid-template-rows: 15vw 15vw 15vw 4vw;
+        font-size: var(--textTab);
+    }
+    
+    .vista4 .opcCircular{
+        width: 6vw;
+        height: 6vw;
+    }
+    
+    .vista4 select{
+        height: 3vw;
+        font-size: 1.5vw;
+    }
+    
+    .vista4 input[type=text] {
+        height: 3vw;
+        width: 80%;
+        font-size: 1.4vw;
+    }
+
+    .vista4 .opciones{
+        width: 95%;
+        height: 4.5vw;
+    }
+    
+    .vista4 .opciones p{
+        font-size: 1.6vw;
+    }
+
+    .gridCarreras .preguntas, .gridCargos .preguntas, .gridEstratos .preguntas, .gridAsignaturas .preguntas , .gridCodigos .preguntas{
+        font-size: 1.8vw;
+    }
+
+    .selectCar{
+        margin: 0 auto;
+    }
+
+    .textCag{
+        margin: 0 auto;
+    }
+
+    .bajo{
+        font-size: 1.4vw;
+    }
+    
+    .alto{
+        font-size: 1.4vw;
+    }
+}
+
+@media screen and (max-width: 540px) {
+    .vista4 {
+        grid-template-rows: 20vw 20vw 21vw 4vw;
+        font-size: var(--textMob);
+    }
+
+    .vista4 .opcCircular{
+        width: 8vw;
+        height: 8vw;
+    }
+    
+    .vista4 select{
+        height: 4vw;
+        font-size: 2vw;
+    }
+    
+    .vista4 input[type=text] {
+        height: 4vw;
+        width: 85%;
+        font-size: 2vw;
+    }
+
+    .vista4 .opciones{
+        width: 98%;
+        height: 7vw;
+    }
+    
+    .vista4 .opciones p{
+        font-size: 2vw;
+    }
+
+    .estratos {
+        width: 95%;
+    }
+
+    .gridCarreras .preguntas, .gridCargos .preguntas, .gridEstratos .preguntas, .gridAsignaturas .preguntas , .gridCodigos .preguntas{
+        font-size: 2.7vw;
+    }
+
+    .gridAsignaturas {
+        grid-template-columns: 60% 40%;
+        grid-template-rows: 1fr 1fr;
+        gap: 0px 0px;
+        grid-template-areas: 
+            "pregAsi pregAsi"
+            "textAsi opcAsi"; 
+    }
+
+    .pregAsi {
+        width: 95%;
+        margin: auto;
+    }
+
+    .opcAsi {
+        width: 80%;
+        margin: auto;
+        text-align: center;
+    }
+
+    .gridCodigos {
+        grid-template-columns: 60% 40%;
+        grid-template-rows: 1fr 1fr;
+        grid-template-areas: 
+            "pregCod pregCod" 
+            "textCod opcCod";
+    }
+
+    .pregCod {
+        width: 95%;
+        margin: auto;
+    }
+
+    .opcCod {
+        width: 80%;
+        margin: auto;
+        text-align: center;
+    }
+
+    .bajo{
+        font-size: 1.8vw;
+    }
+    
+    .alto{
+        font-size: 1.8vw;
+    }
+
+    .botonV4 {
+        top: 50%;
+        width: 100%;
+    }
+
+    .botonV4 input[type=submit]{
+        width: 34%;
+        height: 7vw; 
+    }
+}

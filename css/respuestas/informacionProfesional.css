@@ -1,0 +1,165 @@
+#fondoInformacion {
+    background-image: url("../../img/informacionProfesional/FONDO.png");
+    background-attachment: scroll;
+    background-position: left bottom;
+    background-repeat: no-repeat;
+    background-size: 115% 115%;
+    min-height: 100%;
+    position: relative;
+}
+
+.grid-containerInformacion {
+    display: grid;
+    position: relative;
+    grid-template-columns: 30% 35% 35%;
+    grid-template-rows: 40px 40vw 30vw 110px;
+    gap: 0px 0px;
+    height: 100%;
+}
+
+.informacion {
+    display: grid;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background-image: url("../../img/informacionProfesional/BASE.png");
+    background-size: 95% 97%;
+    background-position: center top;
+    background-repeat: no-repeat;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 30% 25% 15% 30%;
+    gap: 0px 0px;
+    grid-template-areas:
+        "texto1 texto1 texto1"
+        "texto2 texto2 texto2"
+        "datos datos datos"
+        "info info info";
+    grid-area: 2 / 2 / 4 / 4;
+}
+
+.texto1 {
+    grid-area: texto1;
+    text-align: center;
+    height: 100%;
+    margin-top: -2%;
+}
+
+.texto1 img {
+    width: 85%;
+}
+
+.texto2 {
+    grid-area: texto2;
+    position: relative;
+}
+
+.texto2 img {
+    width: 50%;
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+.datos {
+    display: grid;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-image: url("../../img/informacionProfesional/BASE_PARA_DATOS.svg");
+    background-size: 80% 100%;
+    background-position: center top;
+    background-repeat: no-repeat;
+    text-align: center;
+    grid-template-columns: 15% 70% 15%;
+    grid-template-rows: 1fr;
+    gap: 0px 0px;
+    grid-template-areas: ". grado .";
+    grid-area: datos;
+}
+
+.grado {
+    grid-area: grado;
+    margin: 0;
+    position: absolute;
+    top: 42%;
+    left: 70%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+.grado img {
+    width: 7vw;
+}
+
+.grado1 {
+    font-family: throwBold;
+    color: #ffff;
+    font-size: 3vw;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.texto3 {
+    grid-area: info;
+    text-align: center;
+    position: relative;
+}
+
+.texto3 img {
+    width: 85%;
+    position: absolute;
+    bottom: 0%;
+    left: 50%;
+    transform: translate(-50%, -0%);
+}
+
+@media screen and (max-width: 1024px) {
+    .grid-containerInformacion {
+        grid-template-rows: 40px 50vw 40vw 110px;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    #fondoInformacion {
+        background-size: 150% 100%;
+    }
+
+    .grid-containerInformacion {
+        grid-template-columns: 0% 50% 50%;
+        grid-template-rows: 40px 50vw 40vw 80px;
+    }
+
+    .informacion {
+        margin-top: 3%;
+    }
+
+    .grado img {
+        width: 8vw;
+    }
+
+    .grado1 {
+        font-size: 3.5vw;
+    }
+}
+
+@media screen and (max-width: 540px) {
+    #fondoInformacion {
+        background-size: 250% 100%;
+        height: 100%;
+    }
+
+    .grid-containerInformacion {
+        grid-template-rows: 10% 38% 40% 12%;
+    }
+
+    .informacion {
+        background-size: 95% 98%;
+    }
+}

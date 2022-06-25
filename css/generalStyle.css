@@ -1,0 +1,756 @@
+:root {
+  --titulos: rgb(91, 0, 96);
+  --subtitulos: rgb(54, 54, 54);
+  --background: rgb(247, 247, 247);
+  --shadow: -5px 6px 1px 1px rgba(40, 30, 70, 0.2);
+
+  --textTV: 1.2vw;
+  --textLap: 1.5vw;
+  --textTab: 2vw;
+  --textMob: 2.8vw;
+
+  --tituloTV: 3vw;
+  --tituloLap: 3.2vw;
+  --tituloTab: 3.8vw;
+  --tituloMob: 4.8vw;
+  
+  --btnTV: 1.5vw;
+  --btnLap: 1.9vw;
+  --btnTab: 2.3vw;
+  --btnMob: 2.8vw;
+}
+
+@font-face {
+  font-family: throw;
+  src: url("../fonts/ThrowMyHandsUpintheAir.ttf");
+}
+
+@font-face {
+  font-family: throwBold;
+  src: url("../fonts/ThrowMyHandsUpintheAirBold.ttf");
+}
+
+@font-face {
+  font-family: montserrat;
+  src: url("../fonts/Montserrat-Regular.ttf");
+}
+
+@font-face {
+  font-family: montserratLight;
+  src: url("../fonts/Montserrat-Light.ttf");
+}
+
+html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  background: white;
+}
+
+body,
+#app {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+.navBar {
+  display: grid;
+  position: relative;
+  grid-area: 1 / 1 / 2 / 5;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1.6fr 0.4fr;
+  gap: 0px 0px;
+  grid-template-areas:
+    "dropdown dropdown dropdown"
+    ". . .";
+}
+
+.navBar {
+  display: grid;
+  position: relative;
+  grid-area: 1 / 1 / 2 / 5;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1.6fr 0.4fr;
+  gap: 0px 0px;
+  grid-template-areas:
+    "dropdown dropdown dropdown"
+    ". . .";
+}
+
+.dropdown {
+  display: grid;
+  grid-template-columns: 3% 12% 85%;
+  grid-template-rows: 1fr;
+  gap: 0px 0px;
+  grid-template-areas: ". icon .";
+  grid-area: dropdown;
+  background-color: #f7f7f7;
+  -webkit-box-shadow: 0 8px 6px -6px rgb(126, 126, 126, 0.6);
+  -moz-box-shadow: 0 8px 6px -6px rgb(126, 126, 126, 0.6);
+  box-shadow: 0 6px 6px -6px rgb(126, 126, 126, 0.6);
+  height: 0%;
+}
+
+.dropdown input {
+  opacity: 0;
+  position: fixed;
+  width: 1px;
+}
+
+.icon {
+  grid-area: icon;
+  text-align: center;
+  position: relative;
+}
+
+.icon img {
+  display: none;
+  width: 30px;
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  left: 30%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+/* ------ Pagina de Inicio -------*/
+
+#fondoInicio {
+  background-image: url("../img/encuesta/FONDO.png");
+  background-attachment: scroll;
+  background-repeat: no-repeat;
+  background-position: top left;
+  background-size: 100% 100%;
+  min-height: 100%;
+  width: 100%;
+  position: relative;
+  display: flex;
+}
+
+.vistaInicio {
+  display: grid;
+  width: 100%;
+  margin: auto;
+  grid-template-columns: 0.2fr 1.8fr 1.8fr 0.2fr;
+  grid-template-rows: 20px auto auto 20px;
+  gap: 20px 0px;
+  grid-template-areas:
+    ". . . ."
+    ". iniPrueba iniPrueba ."
+    ". iniRepo iniRepo ."
+    ". . . .";
+}
+
+.iniPrueba {
+  display: grid;
+  background-color: var(--background);
+  box-shadow: var(--shadow);
+  border-radius: 20px;
+  grid-template-columns: 80% 20%;
+  grid-template-rows: 7vw auto 2vw;
+  gap: 0px 0px;
+  grid-template-areas:
+    "tituloIni btnIni"
+    "textoIni btnIni"
+    ". btnIni";
+  grid-area: iniPrueba;
+}
+
+.tituloIni {
+  grid-area: tituloIni;
+  width: 90%;
+  margin: auto;
+  text-align: left;
+  font-size: var(--tituloTV);
+  font-family: throwBold;
+  color: var(--titulos);
+}
+
+.textoIni {
+  grid-area: textoIni;
+  width: 90%;
+  margin: 10px auto;
+  text-align: left;
+  font-size: var(--textTV);
+  font-family: montserratLight;
+}
+
+.btnIni {
+  grid-area: btnIni;
+  width: 90%;
+  margin: auto;
+  display: flex;
+  justify-content: flex-start;
+  align-self: center;
+}
+
+.btnIni a {
+  font-size: 1.6vw;
+  font-family: montserrat;
+  font-style: oblique;
+  color: white;
+  padding: 5% 10%;
+  background-color: rgb(91, 0, 96);
+  box-shadow: -2px 2px 1px 1px rgba(40, 30, 70, 0.2);
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  text-decoration: none;
+}
+
+.btnIni a:hover {
+  transform: scale(1.05);
+  color: white;
+  text-decoration: none;
+}
+
+.iniRepo {
+  display: grid;
+  background-color: var(--background);
+  box-shadow: var(--shadow);
+  border-radius: 20px;
+  grid-template-columns: 60% 40%;
+  grid-template-rows: 6vw 6vw 3vw;
+  gap: 0px 0px;
+  grid-template-areas:
+    "tituloRepo btnRepo"
+    "textoRepo btnRepo"
+    ". btnRepo";
+  grid-area: iniRepo;
+}
+
+.tituloRepo {
+  grid-area: tituloRepo;
+  width: 90%;
+  margin: auto;
+  text-align: left;
+  font-size: var(--tituloTV);
+  font-family: throwBold;
+  color: var(--titulos);
+}
+
+.textoRepo {
+  grid-area: textoRepo;
+  width: 90%;
+  margin: auto;
+  text-align: left;
+  font-size: var(--textTV);
+  font-family: montserratLight;
+}
+
+.textoRepo b{
+  color: black;
+  font-weight: bolder;
+}
+
+.btnRepo {
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: 25% auto auto 25%;
+  gap: 0px 0px;
+  grid-template-areas:
+    "."
+    "textCC"
+    "btnBuscar"
+    ".";
+  grid-area: btnRepo;
+  width: 90%;
+  margin: 0 auto;
+}
+
+.textCC {
+  -moz-appearance: textfield;
+  background-color: transparent;
+  border: 1px solid var(--titulos);
+  border-radius: 20px;
+  font-family: montserrat;
+  font-size: var(--textTV);
+  text-align: center;
+  width: 80%;
+  height: 30px;
+  margin: 10px auto;
+  grid-area: textCC;
+}
+
+.btnBuscar {
+  font-size: var(--btnTV);
+  font-family: montserrat;
+  font-style: oblique;
+  color: white;
+  padding: 1.5% 3%;
+  background-color: rgb(91, 0, 96);
+  box-shadow: -2px 2px 1px 1px rgba(40, 30, 70, 0.2);
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  margin: auto;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  grid-area: btnBuscar;
+}
+
+.btnRepo .btnBuscar:hover {
+  transform: scale(1.05);
+}
+
+/* ------ Pagina de Inicio -------*/
+
+.mensaje {
+  grid-area: mensaje;
+  font-family: throwBold;
+  color: black;
+  font-size: 2.3vw;
+  text-align: center;
+}
+
+.nombre {
+  grid-area: nombre;
+  padding: 20% 15% 30% 2%;
+  font-family: montserrat;
+  font-size: 1.2vw;
+  text-align: right;
+  font-style: italic;
+}
+
+.botones {
+  display: grid;
+  position: relative;
+  width: 90%;
+  height: 80%;
+  margin: 0 auto;
+  grid-template-columns: 16.7% 16.7% 16.6% 16.6% 16.7% 16.7%;
+  grid-template-rows: 50% 50%;
+  gap: 0px 0px;
+  grid-area: botones;
+}
+
+.popUp {
+  grid-area: 1 / 1 / 3 / 7;
+  width: 90%;
+  height: 100%;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  display: none;
+  grid-template-columns: 1.9fr 0.1fr;
+  grid-template-rows: 0.4fr 0.8fr 0.8fr;
+  gap: 0px 0px;
+}
+
+.popUp img {
+  grid-area: 1 / 1 / 3 / 3;
+  width: 100%;
+}
+
+.popUpCar {
+  grid-area: 1 / 1 / 3 / 7;
+  width: 90%;
+  height: 100%;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  display: none;
+  grid-template-columns: 1.9fr 0.1fr;
+  grid-template-rows: 0.4fr 0.9fr 1.7fr;
+  gap: 0px 0px;
+  background-image: url(../img/intencionCarrera/INFO_ADAPTABLE.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100% 100%;
+}
+
+.popUpCar .msg {
+  grid-area: 3 / 1 / 3 / 3;
+  width: 100%;
+  font-family: montserrat;
+  font-size: 1.2vw;
+  width: 90%;
+  height: 90%;
+  margin: auto;
+  background-color: rgb(244, 244, 244);
+  text-align: center;
+}
+
+.x {
+  grid-area: 1 / 2 / 2 / 3;
+  cursor: pointer;
+  position: relative;
+}
+
+.atento {
+  grid-area: 1 / 1 / 2 / 3;
+  text-align: center;
+  width: 92%;
+  margin: auto;
+}
+
+.dinamico {
+  grid-area: 1 / 3 / 2 / 5;
+  text-align: center;
+  width: 92%;
+  margin: auto;
+}
+
+.metodico {
+  grid-area: 1 / 5 / 2 / 7;
+  text-align: center;
+  width: 92%;
+  margin: auto;
+}
+
+.imaginativo {
+  grid-area: 2 / 1 / 3 / 3;
+  text-align: center;
+  width: 92%;
+  margin: auto;
+}
+
+.adaptable {
+  grid-area: 2 / 3 / 3 / 5;
+  text-align: center;
+  width: 92%;
+  margin: auto;
+}
+
+.practico {
+  grid-area: 2 / 5 / 3 / 7;
+  text-align: center;
+  width: 92%;
+  margin: auto;
+}
+
+.atento img,
+.dinamico img,
+.metodico img,
+.imaginativo img,
+.adaptable img,
+.practico img {
+  max-width: 90%;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+.atento img:hover,
+.dinamico img:hover,
+.metodico img:hover,
+.imaginativo img:hover,
+.adaptable img:hover,
+.practico img:hover {
+  transform: scale(1.05);
+}
+
+.medalla1 {
+  grid-area: medalla1;
+  position: relative;
+  width: 80%;
+  height: 100%;
+  margin: -5px auto 0 auto;
+  text-align: center;
+}
+
+.medalla2 {
+  grid-area: medalla2;
+  position: relative;
+  width: 90%;
+  height: 100%;
+  margin: -5px auto 0 auto;
+  text-align: center;
+}
+
+.medalla1 img,
+.medalla2 img {
+  width: 100%;
+}
+
+.puntaje1,
+.puntaje2,
+.puntaje3 {
+  font-family: throwBold;
+  font-size: 1.5vw;
+  position: absolute;
+  top: 15%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#cover-loader {
+  display: block;
+  position: fixed;
+  width: 100%;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background-color: rgba(255, 255, 255, 0.98);
+  z-index: 9999;
+}
+
+.load-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  height: 100%;
+  text-align: center;
+}
+
+.loader {
+  border: 4px solid #f3f3f3;
+  border-radius: 50%;
+  border-top: 5px solid rgb(239, 32, 82);
+  border-right: 5px solid rgb(239, 32, 82);
+  border-bottom: 5px solid rgb(239, 32, 82);
+  width: 60px;
+  height: 60px;
+  -webkit-animation: spin 2s linear infinite;
+  animation: spin 0.7s linear infinite;
+  margin: auto;
+}
+
+#carreras1{
+    font-family: montserrat;
+    
+  background-color: var(--background);
+  box-shadow: -2px 2px 1px 1px rgba(40, 30, 70, 0.2);
+  border-radius: 10px;
+}
+
+@-webkit-keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+  }
+
+  100% {
+    -webkit-transform: rotate(360deg);
+  }
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@media screen and (max-width: 1024px){
+
+  .iniPrueba {
+    grid-template-rows: 8vw auto 2vw;
+  }
+
+  .iniRepo {
+    grid-template-rows: 8vw 7vw 3vw;
+  }
+
+  .tituloIni {
+    font-size: var(--tituloLap);
+  }
+
+  .tituloRepo {
+    font-size: var(--tituloLap);
+  }
+
+  .textoIni {
+    font-size: var(--textLap);
+  }
+
+  .textoRepo {
+    font-size: var(--textLap);
+  }
+
+  .textCC {
+    font-size: 1.4vw;
+    width: 95%;
+    height: 25px;
+  }
+
+  .btnIni a {
+    font-size: var(--btnLap);
+    padding: 3% 7%;
+  }
+
+  .btnBuscar {
+    font-size: var(--btnLap);
+    padding: 2% 3%;
+  }
+
+  .popUpCar .msg {
+    font-size: 1.2vw;
+  }
+  
+}
+
+@media screen and (max-width: 767px) {
+  #fondoInicio {
+    background-size: 150% 100%;
+  }
+
+  .vistaInicio {
+    grid-template-rows: 30px auto auto 30px;
+  }
+
+  .dropdown {
+    grid-template-columns: 5% 10% 85%;
+    height: 100%;
+  }
+
+  .icon img {
+    display: block;
+  }
+
+  .navBar {
+    grid-template-rows: 1.7fr 0.3fr;
+  }
+
+  .nombre {
+    font-size: 2vw;
+  }
+
+  .iniPrueba {
+    grid-template-rows: 8vw auto 2vw;
+  }
+
+  .iniRepo {
+    grid-template-rows: 8vw 14vw 2vw;
+  }
+
+  .tituloIni {
+    font-size: var(--tituloTab);
+  }
+
+  .tituloRepo {
+    font-size: var(--tituloTab);
+  }
+
+  .textoIni {
+    font-size: var(--textTab);
+  }
+
+  .textoRepo {
+    font-size: var(--textTab);
+  }
+
+  .textCC {
+    font-size: 1.8vw;
+    width: 95%;
+  }
+
+  .btnIni a {
+    font-size: var(--btnTab);
+    padding: 3% 7%;
+  }
+
+  .btnBuscar {
+    font-size: var(--btnTab);
+    padding: 2% 3%;
+  }
+
+  .popUpCar .msg {
+    font-size: 1.6vw;
+  }
+}
+
+@media screen and (max-width: 540px) {
+
+  #fondoInicio {
+    background-size: 250% 100%;
+    background-attachment: scroll;
+    background-position: bottom left;
+    min-height: 105%;
+  }
+
+  .vistaInicio {
+    grid-template-rows: 10px auto auto 10px;
+  }
+
+  .infoAtento img,
+  .infoDinamico img,
+  .infoMetodico img,
+  .infoImaginativo img,
+  .infoAdaptable img,
+  .infoPractico img {
+    width: 50px;
+  }
+
+  .mensaje {
+    font-size: 2.5vw;
+  }
+
+  .iniPrueba {
+    grid-template-rows: 12vw auto 10vw;
+    grid-template-areas:
+      "tituloIni tituloIni"
+      "textoIni textoIni"
+      "btnIni btnIni";
+  }
+
+  .iniRepo {
+    grid-template-rows: 12vw auto auto;
+    grid-template-areas:
+      "tituloRepo tituloRepo"
+      "textoRepo textoRepo"
+      "btnRepo btnRepo";
+  }
+
+  .tituloIni {
+    font-size: var(--tituloMob);
+    text-align: center;
+  }
+
+  .tituloRepo {
+    font-size: var(--tituloMob);
+    text-align: center;
+  }
+
+  .textoIni {
+    width: 90%;
+    margin: 0 auto;
+    font-size: var(--textMob);
+  }
+
+  .textoRepo {
+    width: 90%;
+    margin: 0 auto;
+    font-size: var(--textMob);
+  }
+
+  .textCC {
+    font-size: 2.5vw;
+  }
+
+  .btnRepo {
+    grid-template-rows: 15px auto auto 15px;
+    margin: auto;
+  }
+
+  .btnIni {
+    text-align: center;
+    margin: auto;
+    justify-content: center;
+  }
+
+  .btnIni a {
+    font-size: var(--btnMob);
+    padding: 1% 6%;
+    border-radius: 5px;
+  }
+
+  .btnBuscar {
+    font-size: var(--btnMob);
+    padding: 1% 8%;
+    border-radius: 5px;
+  }
+
+  .popUpCar .msg {
+    font-size: 1.7vw;
+  }
+}
